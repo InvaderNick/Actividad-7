@@ -1,5 +1,25 @@
 //# Actividad-7
 //Herra#include <stdio.h>
+/*
+int main()
+{
+    int a[]={1,2,3,4,5,6,7,8,9,10};
+    int t=sizeof(a)/sizeof(int);
+    printf("%d\n",t);
+    func1(a, t);
+    return 0;
+}
+
+void func1(int p[],int t){
+    int i;
+    for (i=0;i<t;++i){
+        printf("%d",p[i]);
+        printf("\n");
+    }
+
+}
+*/
+
 #include <stdlib.h>
 #include <time.h>
 #define S 15
