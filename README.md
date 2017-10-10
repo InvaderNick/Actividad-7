@@ -1,6 +1,5 @@
 //# Actividad-7
-//Herramientas
-#include <stdio.h>
+//Herra#include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
 #define S 15
@@ -34,19 +33,15 @@ int main()
     printf("                   5. Totales finales\n");
     printf("                   6. Finalizar\n");
     scanf("%i",&n);
-
-    switch(n){
+switch(n){
 case 1:
     {
     char noms[S]={"Centro"};
-    printf("%30s %s %s","ALMACEN ", noma, "\n");
-    printf("%30s %s %s","SURCUSAL ", noms, "\n");
-    printf("%45s","REPORTE SEMANAL DE VENTAS \n\n");
-    for(x=0;x<=3;x++){
-    printf("%20i. Sucursal %s\n",x+1,s[x]);
-    }
-    printf("DUA DE MAYOR VENTA\n");
-    printf("DEPARTAMENTO DE MAYOR VENTA\n");
+    printf("%30s %s %s","ALMACEN ", noma);
+    printf("\t SURCUSAL %s \n", noms);
+    printf("\t REPORTE SEMANAL DE VENTAS \n");
+    printf("\t DIA DE MAYOR VENTA\n");
+    printf("\t DEPARTAMENTO DE MAYOR VENTA\n");
     }
      break;
 case 2:{
@@ -66,5 +61,7 @@ case 6:
 default:
     printf("No niggie no");
     }
+}
+
     
-  }
+ 
