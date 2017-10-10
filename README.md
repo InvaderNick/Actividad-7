@@ -1,6 +1,45 @@
 //# Actividad-7
 //Herra#include <stdio.h>
 /*
+//MAyor y menor funcion
+int func1(int num[],int t){
+int i=0,may=0,men=1;
+while(i<t){
+   if (num[i]<men){
+        men=num[i];
+    }
+      if (num[i]>may){
+        may=num[i];
+    }
+i=i+1;
+}
+printf("Mayor %i",may);
+printf("Menor %i",men);
+}
+
+int main()
+{
+    int t=3;
+    int i,num[t];
+    for(i=0;i<t;++i){
+    scanf("%i",&num[i]);
+}
+i=0;
+for(i=0;i<=2;i++){
+    printf( "%i \n",num[i]);
+}
+func1(num,t);
+}
+
+
+
+
+*/
+
+
+
+/*
+//Imprime array con funcion
 int main()
 {
     int a[]={1,2,3,4,5,6,7,8,9,10};
