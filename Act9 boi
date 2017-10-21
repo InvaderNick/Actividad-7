@@ -1,0 +1,115 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <malloc.h>
+void doSomething(int** matrix, int size0, int size1){}
+
+void Suma(int** arr1 , int** arr2, int f1,int c1){
+int i,j,suma[f1][c1]={0};
+for(i=0;i<f1;i++){
+        for(j=0;j<c1;j++){
+            suma[i][j]=arr1[i][j]+arr2[i][j];
+        }
+    }
+for(i=0;i<f1;i++){
+        for(j=0;j<c1;j++){
+            printf("%i\t",suma[i][j]);
+        }
+        printf("\n");
+    }
+
+}
+
+void Resta(int** arr1 , int** arr2, int f1,int c1){
+int i,j,resta[f1][c1]={0};
+for(i=0;i<f1;i++){
+        for(j=0;j<c1;j++){
+            resta[i][j]=arr1[i][j]-arr2[i][j];
+        }
+    }
+for(i=0;i<f1;i++){
+        for(j=0;j<c1;j++){
+            printf("%i\t",resta[i][j]);
+        }
+        printf("\n");
+    }
+
+}
+
+void Mult(int** arr1 , int** arr2, int f1,int c1, int c2){
+int i,j,mult[f1][c2]={0},k;
+for(i=0;i<f1;i++){
+        for(j=0;j<c2;j++){
+        	for(k=0;k<c1;k++){
+            mult[i][j]+=arr1[i][k]*arr2[k][j];
+        }
+    }
+}
+for(i=0;i<f1;i++){
+        for(j=0;j<c1;j++){
+            printf("%i\t",mult[i][j]);
+        }
+        printf("\n");
+    }
+
+}
+
+void Almacenar( int** matrix,int f, int c)
+{
+	int i,j;
+	for (i=0; i<f; ++i){
+		for (j=0;j<c;++j){
+    	  printf("Valor para el elemento [%d][%d]: ",i,j);
+      	  scanf("%p",&matrix[i][j]);
+     	}
+ 	printf("\n");
+ 	}	
+}
+int main() {
+ int x,f1,f2,c1,c2,i,j;
+ 
+    printf("f1");
+    scanf("%d",&f1);
+    printf("c1");
+    scanf ("%d",&c1);
+    int **arr1;
+    
+    printf("f2");
+    scanf("%d",&f2);
+    printf("c2");
+    scanf ("%d",&c2);
+    int **arr2;
+    
+    arr1 = (int**)malloc(f1 * sizeof(int*));
+    for (i = 0; i < f1; i++) {
+    arr1[i] = (int*)malloc(c1 * sizeof(int));
+    }
+    doSomething(arr1, f1, c1);
+    for (i = 0; i < f1; i++) {
+    free(arr1[i]);
+    }
+    free(arr1);
+
+    arr2 = (int**)malloc(f2 * sizeof(int*));
+    for (i = 0; i < f2; i++) {
+    arr2[i] = (int*)malloc(c2 * sizeof(int));
+    }
+    doSomething(arr2, f2, c2);
+    for (i = 0; i < f2; i++) {
+    free(arr2[i]);
+    }
+    free(arr2);
+
+    Almacenar(arr1,f1,c1);
+    Almacenar(arr2,f2,c2);
+    
+    if (f1==f2&&c1==c2){
+    printf("La suma es:");
+    Suma(arr1,arr2,f1,c1);
+    printf("La resta es:");
+    Resta(arr1,arr2,f1,c1);
+	}
+    if (c1==f2){
+    printf("La multiplicacion es:");
+    Mult(arr1,arr2,f1,c1,c2);
+    }
+}
